@@ -1,61 +1,63 @@
-# Neapolis - Project Work
+# Neapolis - TSW Project
 
-**Tecnologie Software per il Web**  
-**Università degli Studi di Salerno**  
-**Dipartimento di Ingegneria dell’Informazione ed Elettrica e Matematica Applicata**  
-**Corso di Laurea in Ingegneria Informatica**  
-**Anno accademico 2021-2022**  
+This repository contains a web development project that showcases the main tourist attractions of Naples through a dynamic website.
+
+The project was developed using PHP, JavaScript, HTML/CSS, and PostgreSQL as the backend database. It provides a simple but complete experience for both anonymous and registered users, including the ability to browse information and submit reviews.
 
 ---
 
-## 📚 Descrizione del progetto
+## 🌍 Project Overview
 
-"Neapolis" è un sito web sviluppato come **project work** per il corso universitario di **Tecnologie Software per il Web** (TSW).  
-L'obiettivo del progetto è creare una piattaforma che descriva alcune delle principali attrazioni turistiche della città di Napoli, permettendo agli utenti di:
-- Visualizzare informazioni su orari, tariffe e posizione delle attrazioni.
-- Leggere recensioni pubblicate da altri utenti.
-- Registrarsi e scrivere nuove recensioni.
+The web application allows users to:
 
-Il progetto è stato realizzato in gruppo e la documentazione completa è disponibile all'interno della repository.
+- View a homepage with featured tourist attractions in Naples.
+- Access detailed pages for each attraction, including description, hours, prices, and location via Google Maps.
+- Register and log in to leave reviews with star ratings.
+- View and manage their user account.
+
+The interface dynamically adapts based on login status, and data is securely managed via sessions and hashed credentials.
 
 ---
 
-## 🛠️ Tecnologie utilizzate
+## 🛠️ Technologies Used
 
 - **Frontend:** HTML, CSS, JavaScript
 - **Backend:** PHP
 - **Database:** PostgreSQL
-- **Altre tecnologie:** Sessioni, Cookie, Validazioni Client-side e Server-side
+- **Other:** Google Fonts, Google Maps API, session and cookie management
 
 ---
 
-## 🌟 Funzionalità principali
+## 📁 Repository Structure
 
-- **Homepage** con attrazioni turistiche presentate tramite card interattive.
-- **Registrazione e login utenti** con gestione sicura delle credenziali.
-- **Inserimento recensioni** con valutazione tramite stelle.
-- **Google Maps** integrato per visualizzare la posizione delle attrazioni.
-- **Gestione account** (visualizzazione, modifica dati, cancellazione profilo).
-- **Controlli di accesso**: solo utenti registrati possono lasciare recensioni.
+- `src/` — Website source code (PHP, JS, CSS, images)
+- `docs/` — Project documentation (PDF)
+- `README.md` — Summary and usage instructions
 
 ---
 
-## 📄 Documentazione completa
+## 🚀 How to Use
 
-Per una descrizione dettagliata delle funzionalità, della struttura del database, delle pagine implementate e degli screenshot del sito, consulta:
-
-👉 [Relazione completa](docs/Relazione%20TSW%20-%20Gruppo%2004%20(A-H)%20anno%20accademico%202021-2022.pdf)
-
+1. Clone the repository.
+2. Host the files in the `src/` folder on a local or remote PHP server.
+3. Ensure the PostgreSQL database is configured as per the structure defined in the documentation.
+4. Access the site via browser and explore its features.
 
 ---
 
-## 👥 Membri del gruppo
+## 📄 Documentation
 
-| Nome | Matricola | Email |
-|:----:|:---------:|:-----:|
-| Alessandro Alfieri | 0612704766 | a.alfieri32@studenti.unisa.it |
-| Vittorio Ciancio | 0612704825 | v.ciancio2@studenti.unisa.it |
-| Ferdinando Cuomo | 0612704742 | f.cuomo35@studenti.unisa.it |
-| Marco Di Maio | 0612704713 | m.dimaio39@studenti.unisa.it |
+- [Full Project Report (PDF)](docs/Relazione_TSW_Neapolis.pdf)
+
+This document contains detailed explanations of the project structure, database schema, and screenshots of the website.
+
+---
+
+## 👥 Contributors
+
+- Alessandro Alfieri
+- Vittorio Ciancio
+- Ferdinando Cuomo
+- Marco Di Maio
 
 ---

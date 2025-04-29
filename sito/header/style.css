@@ -1,0 +1,39 @@
+.header-top{
+  overflow: hidden;
+  background-color: #000;
+  top: 0;
+  width: 100%;
+  z-index: 1;
+}
+
+.header__logo img{
+  padding-left: 5px;
+}
+
+.header__logo{
+  float:left;
+  display: block;
+  padding: 0px;
+}
+
+.header__menu{
+  float:right;
+  margin:0;
+  padding: 0;
+}
+
+.header__menu__item{
+  display: inline-block;
+}
+
+.header__menu__item a{
+  color: #fff;
+  display: inline-block;
+  padding: 22px;
+}
+
+.header__menu__item a:hover{
+  background: #2e45b8;
+  padding: 22px;
+  transition: 0.5s;
+}

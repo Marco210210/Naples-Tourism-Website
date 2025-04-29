@@ -1,0 +1,127 @@
+*{
+  margin: 0;
+  padding: 0;
+  font-family: 'Roboto Slab', serif;
+}
+
+html,body{
+  height: 100%;
+  background-color: #D9D9D9;
+}
+
+p{
+  line-height: 22px;
+}
+
+.cover{
+  height: 100%;
+  position: sticky;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  -o-background-size: cover;
+  -moz-background-size: cover;
+}
+
+.cover_filter{
+  background: #000;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  z-index: 0;
+  opacity: 0.4;
+}
+
+.immagine{
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+  position: center center;
+  display: flex;
+}
+
+.immagine_h1{
+  font-size: 16vh;
+  color: #000;
+  background: #fff;
+  padding: 10px 40px;
+  mix-blend-mode: screen;
+  position: relative;
+  z-index: 1;
+  font-family: 'Dancing Script';
+}
+
+.banner{
+  margin-top: 30px ;
+  background: #fff;
+  width: 100%;
+  position: relative;
+  margin-bottom: 50px;
+}
+
+.banner_copy{
+  float: left;
+  height: 100%;
+  display: table;
+  padding-left: 5%;
+  padding-right: 5%;
+}
+
+.banner_copy_text{
+  display: table-cell;
+  vertical-align: middle;
+  padding: 30px;
+  font-size: 1.2em;
+}
+
+.banner_copy_text p{
+  text-align: justify;
+}
+
+.cards{
+  position: relative;
+  max-width: 1200px;
+  margin:auto;
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+
+.card{
+  width:30%;
+  margin: 0 1.5%;
+  background: #fff;
+  float:left;
+}
+
+.card_image{
+  width: 100%;
+  height: auto;
+}
+
+.card_copy{
+  padding: 5px 20px;
+}
+
+.card_copy h3{
+  margin-bottom: 10px;
+}
+
+.card_copy p{
+  text-align: justify;
+}
+
+/*//////////////////////
+Clearfix: serve per evitare che i div collassino (capita quando si usa un float), così da mantenere sempre tutto all'interno dei div
+//////////////////////*/
+
+.clearfix:after{
+  visibility: hidden;
+  display: block;
+  font-size: 0;
+  content: " ";
+  clear: both;
+  height: 0;
+}
+
+* html .clearfix {zoom:1;}
+*:first-child+html .clearfix {zoom:1;}

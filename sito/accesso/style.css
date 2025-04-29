@@ -1,0 +1,356 @@
+:root {
+  --fs-root: 1.2rem;
+  --color-bg: #181d23;
+  --color-gray: #c7c7c7;
+  --color-main: #2e45b8;
+  --color-error: #e2513f;
+  --color-warning: #e49133;
+  --color-success: #2fa94f;
+  --padding-default-sm: 20px;
+  --padding-default-pc: 30px;
+  --margin-bottom: 30px;
+}
+
+*{
+  margin: 0;
+  padding: 0;
+  font-family: 'Roboto Slab', serif;
+}
+
+body {
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  background: url(https://i.postimg.cc/nLFFCX99/napoli-coastline.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  height: 100%;
+}
+
+h1 {
+  font-weight: 300;
+  text-align: center;
+  font-size: 1.8rem;
+  color: white;
+  margin-bottom: var(--margin-bottom)
+}
+
+p{
+  margin-top: -10px;
+}
+
+
+.error {
+  color: var(--color-error);
+}
+
+.success {
+  color: var(--color-success);
+}
+
+.fs-small {
+  font-size: 0.85rem;
+  color: white;
+}
+
+.reg{
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+#notifica-login {
+  font-size: 0.8rem;
+  margin-bottom: 10px;
+  margin-top: 10px;
+}
+
+#notifica-registrazione {
+  font-size: 0.8rem;
+  margin-bottom: 10px;
+  margin-top: 10px;
+}
+
+.notification-warring {
+  color: var(--color-warning);
+  font-weight: bold;
+}
+
+.notification-error {
+  color: var(--color-error);
+  font-weight: bold;
+}
+
+.notification-success {
+  color: var(--color-success);
+  font-weight: bold;
+}
+
+/* MAIN WRAPPER */
+#main-wrapper-lg {
+  background-color: rgba(0, 0, 0, 0.7);
+  width: 35%;
+  margin: auto;
+  padding: var(--padding-default-sm);
+  border-radius: 4px;
+  position: static;
+}
+
+#main-wrapper-rg {
+  background-color: rgba(0, 0, 0, 0.7);
+  width: 45%;
+  margin: auto;
+  padding: var(--padding-default-sm);
+  border-radius: 4px;
+  position: static;
+}
+
+#main-wrapper-ed {
+  background-color: rgba(0, 0, 0, 0.7);
+  width: 40%;
+  margin: auto;
+  padding: var(--padding-default-sm);
+  border-radius: 4px;
+  position: static;
+}
+
+@media only screen and (min-width: 1224px){
+  #main-wrapper-rg
+  {
+    width: 45%;
+    padding: 20px;
+  }
+  #main-wrapper-lg
+  {
+    width: 35%;
+    padding: 20px;
+  }
+  #main-wrapper-ed
+  {
+    width: 40%;
+    padding: 20px;
+  }
+
+}
+
+  /* end MAIN WRAPPER */
+
+  /* STILE FORM LOGIN*/
+  #wrapper-input {
+    font-size: 0.9rem;
+    color:#444;
+  }
+
+  #form-login a {
+    text-decoration: none;
+    color: #33a4fd;
+  }
+
+  #form-login input {
+    font-size: 1.0rem;
+    position: relative;
+  }
+
+  #form-login input::placeholder {
+    color: white;
+    opacity: 0.5;
+    font-weight: 400px;
+    font-size: 1.0rem
+  }
+
+  #form-login input[type='text'],
+  #form-login input[type='email'],
+  #form-login input[type='password']
+  {
+    font-size: 0.8rem;
+    display: block;
+    width: 100%;
+    height: auto;
+    box-sizing: border-box;
+    border-radius: 4px;
+    color: white;
+    margin-bottom: 1rem;
+    padding: 0.8rem;
+    background-color: rgba(0, 0, 0, 0.3);
+    border:none;
+    border-bottom: 1px solid var(--color-gray);
+    appearance: none;
+    transition: all .2s ease-in
+  }
+
+  #form-login input[type='submit'] {
+    appearance: none;
+    border:none;
+    padding: 0.8rem;
+    font-variant: small-caps;
+    letter-spacing: 1px;
+    font-variant: small-caps;
+    letter-spacing: 1px;
+    transition: all 500ms;
+  }
+
+  #form-login input:focus-within,
+  #form-login input:focus,
+  #form-login input:active
+  {
+    border-color: transparent;
+    outline: none;
+    border-bottom: 1px solid var(--color-main);
+  }
+
+  #form-login input[type='submit']:hover {
+    background-color: #ffffff;
+    color: var(--color-main);
+    border:1px solid var(--color-main);
+    cursor: pointer;
+  }
+
+  #form-login input.error,
+  #form-login textarea.error,
+  #form-login select.error {
+    border-color: var(--color-error);
+    border-width: 2px;
+  }
+
+  #form-login input[type="button"],
+  #form-login input[type="submit"],
+  #form-login button {
+    display: inline-block;
+    width: auto;
+  }
+
+  #form-login input[type="submit"],
+  #form-login button {
+    color: #ffffff;
+    background-color: var(--color-main);
+    border-color: var(--color-main);
+  }
+  /* end STILE FORM LOGIN*/
+
+  /* STILE FORM REG/EDIT */
+  #form-registrazione a {
+    text-decoration: none;
+    color: #33a4fd;
+  }
+
+  #form-registrazione input {
+    font-size: 1.0rem;
+    position: relative;
+  }
+
+  #form-registrazione input::placeholder {
+    color: white;
+    opacity: 0.5;
+    font-weight: 400;
+    font-size: 1.0rem;
+
+  }
+
+  #form-registrazione input[type='text'],
+  #form-registrazione input[type='email'],
+  #form-registrazione input[type='password']
+  {
+    font-size: 0.8rem;
+    display: block;
+    width: 100%;
+    height: auto;
+    box-sizing: border-box;
+    border-radius: 4px;
+    color: white;
+    margin-bottom: 1rem;
+    padding: 0.8rem;
+    background-color: rgba(0, 0, 0, 0.3);
+    border:none;
+    border-bottom: 1px solid var(--color-gray);
+    appearance: none;
+    transition: all .2s ease-in;
+  }
+
+  #form-registrazione input[type='submit'] {
+    appearance: none;
+    border:none;
+    padding: 0.8rem;
+    font-variant: small-caps;
+    letter-spacing: 1px;
+    font-variant: small-caps;
+    letter-spacing: 1px;
+    transition: all 500ms;
+  }
+
+  #form-registrazione input:focus-within,
+  #form-registrazione input:focus,
+  #form-registrazione input:active
+  {
+    border-color: transparent;
+    outline: none;
+    border-bottom: 1px solid var(--color-main);
+  }
+
+  #form-registrazione input[type='submit']:hover {
+    background-color: #ffffff;
+    color: var(--color-main);
+    border:1px solid var(--color-main);
+    cursor: pointer
+  }
+
+  #form-registrazione input.error,
+  #form-registrazione textarea.error,
+  #form-registrazione select.error {
+    border-color: var(--color-error);
+    border-width: 2px;
+  }
+
+  #form-registrazione input[type="button"],
+  #form-registrazione input[type="submit"],
+  #form-registrazione button {
+    display: inline-block;
+    width: auto;
+  }
+
+  #form-registrazione input[type="submit"],
+  #form-registrazione button {
+    color: #ffffff;
+    background-color: var(--color-main);
+    border-color: var(--color-main);
+  }
+  /* end STILE FORM REG/EDIT*/
+
+  /* FORZA PASSWORD */
+  #password {
+    position: relative;
+  }
+
+  #password > span {
+    position: absolute;
+    bottom: 4px;
+    width: 50px;
+    height: 6px;
+    background-color: var(--color-gray);
+    border-radius: 4px;
+    transition: .4s all ease-in;
+  }
+
+  #password > span#l_1 {
+    right: 120px;
+  }
+
+  #password > span#l_1.active {
+    background-color: var(--color-error);
+  }
+
+  #password > span#l_2 {
+    right: 60px;
+  }
+
+  #password > span#l_2.active {
+    background-color: var(--color-warning);
+  }
+
+  #password > span#l_3 {
+    right: 0;
+  }
+
+  #password > span#l_3.active {
+    background-color: var(--color-success);
+  }
+  /* end FORZA PASSWORD */

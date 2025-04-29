@@ -42,9 +42,10 @@ Il progetto è stato realizzato in gruppo e la documentazione completa è dispon
 
 ## 📄 Documentazione completa
 
-Per una descrizione dettagliata delle funzionalità, della struttura del database, delle pagine implementate e degli screenshot del sito, si rimanda alla documentazione completa disponibile nel file:
+Per una descrizione dettagliata delle funzionalità, della struttura del database, delle pagine implementate e degli screenshot del sito, consulta:
 
-> `docs/Relazione TSW - Gruppo 04 (A-H) anno accademico 2021-2022.docx`
+👉 [Relazione completa - Word](docs/Relazione%20TSW%20-%20Gruppo%2004%20(A-H)%20anno%20accademico%202021-2022.docx)
+
 
 ---
 

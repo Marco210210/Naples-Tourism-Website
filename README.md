@@ -1,4 +1,4 @@
-# Neapolis - TSW Project
+# Naples Tourism Website
 
 This repository contains a web development project that showcases the main tourist attractions of Naples through a dynamic website.
 

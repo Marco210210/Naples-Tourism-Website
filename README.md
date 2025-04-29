@@ -2,151 +2,177 @@
 
 **Tecnologie Software per il Web**  
 **Università degli Studi di Salerno**  
+**Dipartimento di Ingegneria dell’Informazione ed Elettrica e Matematica Applicata**  
+**Corso di Laurea in Ingegneria Informatica**  
 **Canale A-H**  
-**Anno accademico 2021-2022**
+**Anno accademico 2021-2022**  
+
+---
 
 ## Gruppo 04
-| Nome | Matricola | Email |
-|:----:|:---------:|:-----:|
-| Alessandro Alfieri | 0612704766 | a.alfieri32@studenti.unisa.it |
-| Vittorio Ciancio | 0612704825 | v.ciancio2@studenti.unisa.it |
-| Ferdinando Cuomo | 0612704742 | f.cuomo35@studenti.unisa.it |
-| Marco Di Maio | 0612704713 | m.dimaio39@studenti.unisa.it |
+
+| Cognome e Nome | Matricola | E-mail |
+|:--------------:|:---------:|:------:|
+| Alfieri Alessandro | 0612704766 | a.alfieri32@studenti.unisa.it |
+| Ciancio Vittorio | 0612704825 | v.ciancio2@studenti.unisa.it |
+| Cuomo Ferdinando | 0612704742 | f.cuomo35@studenti.unisa.it |
+| Di Maio Marco | 0612704713 | m.dimaio39@studenti.unisa.it |
 
 ---
 
-## Descrizione del progetto
+# 1 - Descrizione della realtà d’interesse
 
-"Neapolis" è un sito web dedicato alla presentazione delle attrazioni turistiche della città di Napoli.  
-Il sito offre:
-- Homepage con card descrittive delle attrazioni.
-- Recensioni utente (solo per utenti registrati).
-- Visualizzazione di posizione, tariffe e orari delle attrazioni.
+Il tema assegnatoci verte su di un sito web atto a descrivere le attrazioni turistiche di una città.  
+Abbiamo incentrato il nostro sito web sulla descrizione delle attrazioni della città di Napoli, focalizzandoci sulla posizione, sulle tariffe e sugli orari delle visite per ciascuna di essa.  
+Il sito è caratterizzato da una homepage contenente alcune delle principali attrazioni visitabili, brevemente descritte in delle “card”; all’interno delle stesse sono presenti ulteriori informazioni riguardanti l’attrazione, le recensioni lasciate dall’utente e la possibilità di lasciare nuove recensioni solo dagli utenti registrati.
 
-### Limitazioni
-- Non copre tutte le attrazioni della città.
-- Commenti non modificabili né cancellabili dagli utenti.
-- Username non modificabile dopo la registrazione.
+### Limitazioni:
+- Non presenta tutte le possibili attrazioni visitabili dell’intera città di Napoli.
+- L’utente loggato non ha la possibilità di cancellare/modificare eventuali commenti una volta pubblicati.
+- L’utente non ha la possibilità di modificare l’username.
 
 ---
 
-## Architettura Tecnica
+# 2 - Progettazione
 
-- **DBMS:** PostgreSQL
-- **Database:** `TSW` (user: `www`, password: `tsw2022`)
-- **Tabelle principali:**
-  - `account` (utenti registrati)
-  - `cristovelato`, `musarcheologico`, `napolisott`, `palazzo`, `sangennaro`, `santachiara` (recensioni attrazioni)
+Per la gestione dei dati lato server è stato utilizzato il DBMS PostgreSQL. È stato creato un database chiamato `TSW` (user: `www`, password: `tsw2022`) contenente sette tabelle:
 
-- **Tecnologie:**
-  - PHP per la logica server-side.
-  - JavaScript per validazioni lato client.
-  - Sessioni e cookie per gestione autenticazione.
+- account
+- cristovelato
+- musarcheologico
+- napolisott
+- palazzo
+- sangennaro
+- santachiara
 
----
+### Tabelle:
+- **account**: dati utenti (id, nome, cognome, username, e-mail, password).
+- **Attrazioni** (cristovelato, musarcheologico, napolisott, palazzo, sangennaro, santachiara): recensioni (id, commento, data, nome utente, stelle).
 
-## Struttura delle pagine
+### Struttura pagine web:
 
-- **Homepage:** Fotogallery + card attrazioni.
-- **Accedi:** Form login con controlli JS e PHP.
-- **Registrati:** Form registrazione, sicurezza password.
-- **Account:** Visualizzazione dati utente.
-- **Modifica Account:** Modifica dati e password.
-- **Attrazione:** Informazioni + mappa + recensioni.
-- **Scrivi Recensione:** Form con stelle e commento.
+**Header:**  
+Due versioni in base allo stato utente (loggato/non loggato):
+- Logo "Neapolis" a sinistra.
+- Bottoni "Accedi"/"Registrati" o "Account"/"Logout" a destra.
 
-**Differenze di layout:** Header e Footer cambiano a seconda dello stato utente (anonimo/loggato).
+Pagine collegate:
+- Accedi ➔ `login.php`
+- Registrati ➔ `registrati.php`
+- Account ➔ `account.php`
+- Logout ➔ `logout.php`
 
----
-
-## Dettagli implementativi
-
-- **Sessioni:** Gestione attiva in tutte le pagine.
-- **Cookie:** Creazione alla login, durata 6 ore.
-- **Sicurezza:** Password crittografata tramite hash.
-- **Controlli accessi:** Redirect e pop-up per utenti non loggati.
-- **Protezione pagine:** Accesso controllato tramite sessioni.
-
-**File principali:**
-- `db.php`: Connessione al database.
-- `login-manager.php`: Gestione login e cookie.
-- `logout.php`: Logout e cancellazione cookie.
-- `salva.php`: Salvataggio recensioni.
+**Footer:**  
+Due versioni:
+- Homepage/Attrazioni ➔ Logo + info gruppo + "Torna alla home".
+- Altre pagine ➔ Solo info gruppo + "Torna alla home".
 
 ---
 
-## Librerie esterne
+# 3 - Descrizione pagine visitabili
 
-- Google Fonts (tipografia del sito).
+Il sito è composto da 17 pagine:
+
+## Homepage
+- Fotogallery in background.
+- Scritta "Napoli" centrale.
+- Descrizione della città.
+- Card delle attrazioni.
+- Footer.
+
+**Screenshot:**  
+![Homepage non loggato](images/image_1.png)  
+![Homepage loggato](images/image_2.png)  
+![Homepage 2](images/image_3.png)  
+![Homepage 3](images/image_4.png)
+
+## Accedi
+- Sfondo lungomare di Napoli.
+- Form Email + Password.
+- Link a Registrazione.
+- Bottone azzurro "Accedi".
+- Validazioni JavaScript (`login.js`) e PHP.
+
+**Screenshot:**  
+![Login](images/image_5.png)
+
+## Registrati
+- Sfondo lungomare.
+- Form Nome, Cognome, Username, E-mail, Password, Conferma password.
+- Checkbox consenso dati personali.
+- Link ad Accedi.
+- Bottone azzurro "Registrati".
+- Validazioni JavaScript (`reg-edit.js`) e PHP.
+
+**Screenshot:**  
+![Registrazione](images/image_6.png)
+
+## Account
+- Sfondo ritratto di San Gennaro (Jorit).
+- Visualizzazione Nome, Cognome, E-mail, Username.
+- Bottoni "Modifica" e "Cancella" account.
+
+**Screenshot:**  
+![Account](images/image_7.png)
+
+## Modifica contatto
+- Sfondo lungomare.
+- Form per modificare i dati.
+- Bottone "Modifica".
+- Validazioni JavaScript (`reg-edit.js`) e PHP.
+
+**Screenshot:**  
+![Modifica contatto](images/image_8.png)
+
+## Singola attrazione
+- Fotogallery attrazione.
+- Descrizione attrazione.
+- Orari, tariffe, mezzi di trasporto.
+- Google Maps dinamica.
+- Tabella recensioni + bottone "Lascia una recensione".
+- Card delle altre attrazioni.
+
+**Screenshot (Cristo Velato esempio):**  
+![Attrazione 1](images/image_9.png)  
+![Attrazione 2](images/image_10.png)  
+![Attrazione 3](images/image_11.png)  
+![Attrazione 4](images/image_12.png)  
+![Attrazione 5](images/image_13.png)  
+![Attrazione 6](images/image_14.png)
+
+## Scrittura recensione
+- Sfondo immagine sfocata dell’attrazione.
+- Cinque stelle cliccabili.
+- Box commento.
+- Bottone azzurro "Invia".
+- Avviso: "Il commento non potrà essere cancellato né modificato".
+
+**Screenshot:**  
+![Scrivi recensione](images/image_15.png)
 
 ---
 
-## Screenshot del sito
+# 4 - Dettagli implementativi
 
-### Screenshot 1
+- **Sessioni:** attive su tutte le pagine.
+- **Cookie:** creati alla login, durata 6 ore (nome, cognome, e-mail, username, flag sessione).
+- **Controlli accesso:** redirect a homepage se tentato accesso senza login.
+- **Gestione utenti:** distinti anonimi e loggati.
+- **Password:** livelli di sicurezza durante registrazione, hash salvato nel database.
 
-![Screenshot 1](images/image_1.png)
+### File PHP principali
+- `db.php`: connessione a PostgreSQL.
+- `login-manager.php`: gestione login, creazione cookie e sessione.
+- `logout.php`: distruzione sessione e cookie.
+- `salva.php`: salvataggio recensione.
 
-### Screenshot 2
+### Librerie esterne
+- Google Fonts.
 
-![Screenshot 2](images/image_3.png)
+---
 
-### Screenshot 3
+# 5 - Screenshot del sito
 
-![Screenshot 3](images/image_4.png)
+Sono allegati gli screenshot principali del sito nelle sezioni sopra riportate.
 
-### Screenshot 4
-
-![Screenshot 4](images/image_6.png)
-
-### Screenshot 5
-
-![Screenshot 5](images/image_7.png)
-
-### Screenshot 6
-
-![Screenshot 6](images/image_9.png)
-
-### Screenshot 7
-
-![Screenshot 7](images/image_10.png)
-
-### Screenshot 8
-
-![Screenshot 8](images/image_12.png)
-
-### Screenshot 9
-
-![Screenshot 9](images/image_13.png)
-
-### Screenshot 10
-
-![Screenshot 10](images/image_14.png)
-
-### Screenshot 11
-
-![Screenshot 11](images/image_18.png)
-
-### Screenshot 12
-
-![Screenshot 12](images/image_22.png)
-
-### Screenshot 13
-
-![Screenshot 13](images/image_23.png)
-
-### Screenshot 14
-
-![Screenshot 14](images/image_25.png)
-
-### Screenshot 15
-
-![Screenshot 15](images/image_30.png)
-
-### Screenshot 16
-
-![Screenshot 16](images/image_31.png)
-
-### Screenshot 17
-
-![Screenshot 17](images/image_32.png)
+---

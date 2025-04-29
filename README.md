@@ -81,10 +81,72 @@ Il sito offre:
 
 ---
 
-## Screenshot (disponibili nel repository)
+## Screenshot del sito
 
-- Homepage (utente anonimo e loggato).
-- Login / Registrazione.
-- Account / Modifica profilo.
-- Pagine attrazioni ("Cristo Velato" esempio).
-- Scrittura recensioni.
+### Screenshot 1
+
+![Screenshot 1](images/image_1.png)
+
+### Screenshot 2
+
+![Screenshot 2](images/image_3.png)
+
+### Screenshot 3
+
+![Screenshot 3](images/image_4.png)
+
+### Screenshot 4
+
+![Screenshot 4](images/image_6.png)
+
+### Screenshot 5
+
+![Screenshot 5](images/image_7.png)
+
+### Screenshot 6
+
+![Screenshot 6](images/image_9.png)
+
+### Screenshot 7
+
+![Screenshot 7](images/image_10.png)
+
+### Screenshot 8
+
+![Screenshot 8](images/image_12.png)
+
+### Screenshot 9
+
+![Screenshot 9](images/image_13.png)
+
+### Screenshot 10
+
+![Screenshot 10](images/image_14.png)
+
+### Screenshot 11
+
+![Screenshot 11](images/image_18.png)
+
+### Screenshot 12
+
+![Screenshot 12](images/image_22.png)
+
+### Screenshot 13
+
+![Screenshot 13](images/image_23.png)
+
+### Screenshot 14
+
+![Screenshot 14](images/image_25.png)
+
+### Screenshot 15
+
+![Screenshot 15](images/image_30.png)
+
+### Screenshot 16
+
+![Screenshot 16](images/image_31.png)
+
+### Screenshot 17
+
+![Screenshot 17](images/image_32.png)

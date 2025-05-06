@@ -55,9 +55,9 @@ This document contains detailed explanations of the project structure, database 
 
 ## 👥 Contributors
 
-- Alessandro Alfieri
-- Vittorio Ciancio
-- Ferdinando Cuomo
-- Marco Di Maio
+- Alfieri Alessandro 
+- [Ciancio Vittorio](https://github.com/VittorioCiancio)
+- Cuomo Ferdinando 
+- Di Maio Marco
 
 ---
